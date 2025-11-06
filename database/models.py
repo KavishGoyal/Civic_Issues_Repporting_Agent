@@ -48,7 +48,7 @@ class Notification(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
 # Database setup
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:root@localhost:5432/civic_issues")
+DATABASE_URL = os.getenv("DATABASE_URL", "") ## can provide the url directly 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
