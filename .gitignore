@@ -8,3 +8,6 @@ Dockerfile
 ./monitoring
 .github
 .venv
+monitoring/*
+scripts/*
+my_env/*
