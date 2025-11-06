@@ -11,3 +11,6 @@ Dockerfile
 monitoring/*
 scripts/*
 my_env/*
+monitoring
+scripts
+my_env
