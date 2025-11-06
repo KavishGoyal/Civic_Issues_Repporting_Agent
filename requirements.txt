@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+langgraph
+langchain
+langchain-groq
+psycopg2-binary
+sqlalchemy
+streamlit
+python-multipart
+pillow
+pydantic
+python-dotenv
+httpx
+aiofiles

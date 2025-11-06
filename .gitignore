@@ -1,0 +1,10 @@
+.env
+./my_env
+*.yml
+Dockerfile
+./scripts
+./tests
+*.ini
+./monitoring
+.github
+.venv

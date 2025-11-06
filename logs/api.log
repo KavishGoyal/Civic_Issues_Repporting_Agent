@@ -1,0 +1,60 @@
+/Users/kavishgoyal/Downloads/civic_issue_detection/app/main.py:30: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [14333]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54133 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54135 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54152 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54154 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54156 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54158 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54161 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54163 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54165 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54167 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54169 - "GET /api/issues HTTP/1.1" 200 OK
+Vision Agent Response: ```json
+{
+    "issue_detected": true,
+    "issue_type": "pothole",
+    "severity": "high",
+    "description": "A large pothole is visible, filled with rainwater, indicating significant road damage. The presence of water suggests recent rainfall, and the size of the pothole is substantial enough to have caused accidents, as mentioned in the additional context.",
+    "confidence": 0.9
+}
+```
+Vision Agent: {'issue_detected': True, 'issue_type': 'pothole', 'severity': 'high', 'description': 'A large pothole is visible, filled with rainwater, indicating significant road damage. The presence of water suggests recent rainfall, and the size of the pothole is substantial enough to have caused accidents, as mentioned in the additional context.', 'confidence': 0.9}
+Error in action planning: Expecting value: line 1 column 1 (char 0)
+Agents Results: {'image_path': 'uploads/20251106_130751_image.jpg', 'audio_text': 'There is a big pothole filled with rainwater near Miramar Circle. Two vehicles already fell into it last night due to heavy rain.', 'reporter_name': 'Rahul', 'location': 'Panaji, Goa', 'latitude': 26.9124, 'longitude': 75.7873, 'issue_detected': True, 'issue_type': 'pothole', 'severity': 'high', 'description': 'A large pothole is visible, filled with rainwater, indicating significant road damage. The presence of water suggests recent rainfall, and the size of the pothole is substantial enough to have caused accidents, as mentioned in the additional context.', 'confidence': 0.9, 'suggested_actions': {'immediate_actions': ['Report to authorities', 'Document the issue'], 'citizen_actions': ['Stay safe', 'Inform neighbors'], 'authority_actions': ['Inspect the site', 'Deploy team'], 'preventive_measures': ['Regular maintenance', 'Community awareness']}, 'agency_data': {'agency_id': 3, 'agency_name': 'Public Works Department', 'email': 'pwd@municipality.gov', 'phone': '+91-141-2345680'}, 'notification_sent': True, 'error': ''}
+
+============================================================
+NOTIFICATION SENT TO: Public Works Department
+Email: pwd@municipality.gov
+Phone: +91-141-2345680
+
+Message:
+**Urgent Road Maintenance Notification**
+
+A high-severity pothole has been reported in Panaji, Goa, posing a significant risk to road safety. The large pothole, currently filled with rainwater, is located in [specific location, e.g., near the intersection of XYZ Road and ABC Street].
+
+**Severity Level:** High
+
+The presence of water and the substantial size of the pothole indicate a high likelihood of accidents. Immediate attention is required to prevent potential hazards and ensure public safety.
+
+**Required Action:** We urge the concerned authorities to take prompt action to inspect and repair the damaged road section as soon as possible. A temporary fix to drain the water and prevent further damage is recommended until a permanent repair can be undertaken.
+
+Please treat this matter with urgency and allocate necessary resources to address the issue at the earliest.
+============================================================
+
+INFO:     127.0.0.1:54171 - "POST /api/report-issue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54179 - "GET /api/issues HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14333]
